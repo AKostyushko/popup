@@ -1,0 +1,138 @@
+html, body, div, form, main, p {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+}
+body {
+    background: #5F5F5F;
+    width: 99vw;
+    height: 150vh;
+    overflow-x: hidden;
+}
+main {
+    background-image: url("../img/fon.jpg");
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.popup__form {
+    position: absolute;
+    top: 48%;
+    left: 45%;
+}
+.popup_wrap {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.popup {
+    position: absolute;
+    left: 27%;
+    top: 15%;
+    width: 46%;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+.popup__head {
+    position: relative;
+    background: url("../img/lights-night-unsharp-blured@2x.png") no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.popup__head-text {
+    color: #FFFFFF;
+    font: 600 24px "Graphik LCG";
+    line-height: 29px;
+    padding: 13% 7% 7% 7%;
+}
+.popup__head-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+.close_popup {
+    height: 20px;
+    padding: 25%;
+}
+.popup__head-close:hover > .close_popup {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+.popup__main {
+    padding: 0 22% 7% 7%;
+    font-family: "Graphik LCG";
+}
+.popup__main-top {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.popup__main-text {
+    color: #000000;
+    font-size: 14px;
+    line-height: 20px;
+}
+ul {
+    padding-left: 25px;
+}
+li {
+    color: red;
+    line-height: 32px;
+}
+.strong_text {
+    font-weight: 600;
+}
+.popup__main-link {
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #E40000;
+    font: 14px "Graphik LCG";
+    line-height: 17px;
+}
+.popup__main-link:hover {
+    text-decoration: underline;
+}
+.btn {
+    height: 48px;
+    width: 143px;
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    color: #808080;
+    font: 600 13px "Graphik LCG";
+    line-height: 16px;
+    margin: 16px 8px 0 0;
+    outline: none;
+}
+.btn:hover {
+    transition: 0.2s;
+    border-color: unset;
+    background-color: #E40000;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.call_popup {
+    height: 75px;
+    width: 150px;
+    outline: none;
+}
+.call_popup:hover {
+    background-color: #348288;
+}
+
+/*---------------------------------------------------------------*/
+@font-face {
+    font-family: "Graphik LCG";
+    src: url("../../incomming/fonts/GraphikLCG/GraphikLCG.eot");
+    src: url("../../incomming/fonts/GraphikLCG/GraphikLCG.eot?#iefix") format("embedded-opentype"), url("../../incomming/fonts/GraphikLCG/GraphikLCG.woff") format("woff"), url("../../incomming/fonts/GraphikLCG/GraphikLCG.ttf") format("truetype"), url("../../incomming/fonts/GraphikLCG/GraphikLCG.svg#partnercondensedbold") format("svg");
+    font-weight: normal;
+    font-style: normal; }
