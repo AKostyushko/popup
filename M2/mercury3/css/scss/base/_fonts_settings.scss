@@ -1,0 +1,53 @@
+h1, h2, h3, h4, h5, h6{
+//	font-family:$font_main;
+	@extend %font_property;
+}
+h1{
+	margin:0;
+	letter-spacing:-0.08px;
+}
+h2{
+/*	color:#132759;*/
+	padding-top:15px;
+	padding-bottom:15px;
+	color:#af1105;
+	font-size:22px;
+}
+h3{
+	padding:15px 0px;
+	color:#fff;
+	font-size:18px;
+}
+h4{
+	padding-top:10px;
+	padding-bottom:14px;
+	font-size:18px;
+}
+
+.link{
+	font-size:14px;
+	font-weight:900;
+}
+.green{
+	@include link(#308a11);
+	& a{
+		@include link(#308a11, a);
+	}
+}
+.blue{
+	@include link(#006cc0);
+	& a{
+		@include link(#006cc0, a);
+	}
+}
+.red{
+	& a{
+	}
+}
+.orange{
+	@include link(#974700);
+	& a{
+		@include link(#974700, a);
+	}
+}
+

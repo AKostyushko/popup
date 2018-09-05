@@ -1,0 +1,171 @@
+.achievements{
+	&__profile{
+		flex-basis:50%;
+		padding-right:24px;
+		border-right:1px solid #e1e1e1;
+	}
+	&__personal{
+		
+	}
+	&__fullness{
+		position:relative;
+		margin-top:32px;
+		padding:20px;
+		border:1px solid #DEDEDE;
+		@include radius(6px);
+	}
+	&__fullness-title{
+		display:inline-block;
+		color:#000;
+		font-size:14px;
+		font-weight:600;
+	}
+	&__fullness-percents{
+		display:inline-block;
+		padding-left:4px;
+		color:#808080;
+		font-size:14px;
+		font-weight:500;
+	}
+	&__fullness-progress{
+		padding-top:20px;
+	}
+	&__fullness-statuses{
+		color:#808080;
+		font-size:13px;
+	}
+	&__fullness-beginer{
+		position:absolute;
+		left:20px;
+		bottom:20px;
+	}
+	&__fullness-average{
+		padding-top:20px;
+		text-align:center;
+	}
+	&__fullness-advanced{
+		position:absolute;
+		right:20px;
+		bottom:20px;
+	}
+	&__statuses{
+		flex-basis:50%;
+		padding-left:20px;
+	}
+	&__status{
+		float:left;
+		position:relative;
+		width:33.33%;
+		text-align:center;
+	}
+	&__status_enabled{
+		.achievements__status-image{
+			background:url("../img/star_enabled.svg") no-repeat top center;
+		}
+	}
+	&__status_disabled{
+		cursor:pointer;
+		&:hover .achievements__status-image{
+			background:url("../img/star_hover.svg") no-repeat top center;
+		}
+		.achievements__status-image{
+			background:url("../img/star_disabled.svg") no-repeat top center;
+		}
+		.achievements__status-number{
+			padding-top:23px;
+			color:#fff;
+		}
+		.achievements__status-name{
+			color:#BFBFBF;
+		}
+	}
+	&__status-image{
+		height:90px;
+	}
+	&__status-number{
+		padding-top:25px;
+		color:#000;
+		font-size:32px;
+	}
+	&__status-name{
+		padding-bottom:44px;
+		font-size:13px;
+		font-weight:600;
+	}
+	.popup-small{
+		margin-top:-35px;
+	}
+}
+
+.personal{
+	&__photo{
+		float:left;
+	}
+	&__info{
+		float:left;
+		padding-top:15px;
+		padding-left:24px;
+	}
+	&__name{
+		padding-bottom:12px;
+		color:#333333;
+		font-size:20px;
+		font-weight:500;
+		line-height:24px;
+	}
+	&__status{
+		display:inline-block;
+		padding:5px 6px;
+		color:#fff;
+		font-size:13px;
+		font-weight:600;
+		@include radius(4px);
+		@include shaddow(0 6px 8px 0 rgba(0,0,0,0.2));
+	}
+	&__status_red{
+		background-color:#E40000;
+	}
+	&__status_grey{
+		background-color:#7E969F;
+	}
+	&__location{
+		display:inline-block;
+		padding-left:12px;
+		color:#808080;
+		font-size:13px;
+	}
+}
+
+.block-grey{
+	padding:20px 20px;
+	background-color:#f7f7f7;
+	border-top:1px solid #e1e1e1;
+	@include radius_one(8px, bottom, left);
+	@include radius_one(8px, bottom, right);
+	.block-white{
+		flex-basis:50%;
+		@include shaddow(none);
+		&:nth-child(1){
+			margin-right:16px;
+		}
+		&:nth-child(2){
+			margin-left:16px;
+		}
+	}
+	.block-white__padding{
+		padding-bottom:16px;
+	}
+	&__title{
+		float:left;
+		color:#000;
+		font-size:14px;
+		line-height:17px;
+	}
+	&__number{
+		float:right;
+		color:#BFBFBF;
+		font-size:40px;
+		font-weight:300;
+		font-family:"GraphikLCGLight", Arial, sans-serif;
+	}
+}

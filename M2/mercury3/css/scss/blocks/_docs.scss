@@ -1,0 +1,47 @@
+.docs{
+	&__blocks{
+		margin:0px -16px;
+	}
+	&__block{
+		float:left;
+		width:50%;
+		padding:0px 16px 32px;
+	}
+	&__border{
+		padding:30px 32px;
+		border:1px solid #E6E6E6;
+		@include radius(8px);
+	}
+	&__icon{
+		height:62px;
+		background-repeat:no-repeat;
+	}
+	&__icon-agreement_user{
+		background:url("../img/agreement_user.svg") no-repeat;
+	}
+	&__icon-agreement_data{
+		background:url("../img/oath.svg") no-repeat;
+	}
+	&__icon-oath{
+		background:url("../img/oath.svg") no-repeat;
+	}
+	&__icon-bonuses{
+		background:url("../img/bonuses.png") no-repeat;
+	}
+	&__title{
+		padding-top:58px;
+		line-height:24px;
+		color:#000;
+		font-size:20px;
+	}
+	&__link{
+		display:inline-block;
+		padding-top:16px;
+		color:#808080;
+		font-size:14px;
+	}
+	&__{
+	}
+	&__{
+	}
+}

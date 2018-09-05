@@ -1,0 +1,89 @@
+.programs{
+	&__list{
+		padding:0px 20px 8px;
+		flex-wrap:wrap;
+		@extend %flex;
+	}
+	&__flex{
+		flex-basis:25%;
+	}
+	&__item{
+		position:relative;
+		flex-direction:column;
+		justify-content:space-between;
+		height:122px;
+		margin:0px 12px 24px;
+		padding:20px;
+		border:1px solid #DEDEDE;
+		@include radius(8px);
+		@extend %flex;
+	}
+	&__item_shadow{
+		@include shaddow(0 12px 20px 0 rgba(0,0,0,0.1));
+	}
+	&__icon{
+		height:45px;
+		background-repeat:no-repeat;
+	}
+	&__title{
+		font-family:"GraphikLCGSemibold", Arial, sans-serif;
+	}
+	&__title_disabled{
+		color:#B3B3B3;
+	}
+	&__circle{
+		position:absolute;
+		top:15px;
+		right:15px;
+		width:20px;
+		height:20px;
+		background-color:#D6EADA;
+		text-align:center;
+		border:1px solid #A9D7B1;
+		@include radius(60px);
+	}
+	&__circle2{
+		display:inline-block;
+		width:8px;
+		height:8px;
+		margin-top:5px;
+		background-color:#77B983;
+		@include radius(60px);
+	}
+	&__icon_aid{
+		background-image:url("../img/circles.svg");
+	}
+	&__icon_e_currencies{
+		background-image:url("../img/big_bang.svg");
+	}
+	&__icon_investments{
+		background-image:url("../img/angle.svg");
+	}
+	&__icon_insurance{
+		background-image:url("../img/shield.svg");
+	}
+	&__icon_pension{
+		background-image:url("../img/credit_cards.svg");
+	}
+	&__icon_adulthood{
+		background-image:url("../img/education.svg");
+	}	
+	&__icon_consumer{
+		background-image:url("../img/shopping_bags.svg");
+	}
+	&__icon_autoprogram{
+		background-image:url("../img/car_wheel.svg");
+	}
+	&__icon_property{
+		background-image:url("../img/building.svg");
+	}
+	&__icon_recreation{
+		background-image:url("../img/spa.svg");
+	}
+	&__icon_crt{
+		background-image:url("../img/crt.png");
+	}
+	&__icon_ecr{
+		background-image:url("../img/ecr.svg");
+	}
+}

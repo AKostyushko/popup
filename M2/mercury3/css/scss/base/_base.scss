@@ -1,0 +1,617 @@
+/* ----------------------------------------- */
+/*                  Modal                    */
+/* ----------------------------------------- */
+	.fog{
+		position:absolute;
+		display:none;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		background-color:rgba(0, 0, 0, 0.6);
+//		cursor:url("../img/cursor-side-area.png") 12 12, default;
+		z-index:10000;
+	}
+	.fog2{
+		position:absolute;
+		display:none;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		background-color:rgba(0, 0, 0, 0.8);
+		z-index:999;
+		&.show{
+			display:block;
+		}
+	}
+	.modal{
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow:auto;
+		z-index:20000;
+	}
+	/* Устанавливаем свойства дива, в котором показывается контент модального окна */
+	#modal_content{
+		position:relative;
+		top:50px;
+		width:auto;
+		margin:0 auto;
+//		margin-bottom:100px;
+		background:#fff;
+		color:#666;
+		font-size:14px;
+		z-index:20000;
+
+		@include respond-to(tablet-s){
+			width:100% !important;
+			top:0px;
+		}
+		&.height{
+			@include respond-to(tablet-s){
+				height:100% !important;
+			}
+		}
+		&.small{
+			position:fixed;
+			top:0px;
+			bottom:0px;
+			left:0px;
+			right:0px;
+			margin:auto;
+			@include respond-to(tablet-s){
+				position:absolute;
+				height:auto !important;
+			}
+		}
+		& .close{
+			position:absolute;
+			top:37px;
+			right:32px;
+			width:16px;
+			height:16px;
+			background-image:url("../img/ico_cross.svg");
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:80% auto;
+			opacity:.4;
+			color:#ccc;
+			z-index:5;
+			@include respond-to(tablet-m){
+				top:31px;
+			}
+			&:hover, &:focus{
+				opacity:1;
+			}
+			&.top{
+				top:26px;
+			}
+		}
+		& .padd{
+			padding:0px 32px 32px;
+			@include respond-to(tablet-s){
+				padding:0px 16px 32px;
+			}
+			&.height{
+				min-height:230px;
+			}
+			& .bg_grey2{
+				position:relative;
+				margin-bottom:32px;
+				padding:16px 16px 16px 20px;
+				background-color:#F2F2F2;
+				@include radius(8px);
+
+				& .title_small{
+					padding-bottom:8px;
+				}
+				& .link{
+					padding-right:50px;
+					word-wrap:break-word;
+					cursor:pointer;
+					color:#D32F2F;
+				}
+				& #result_refresh{
+					position:absolute;
+					left:20px;
+					margin-top:12px;
+					opacity:0;
+					z-index:10000;
+					@extend %transition;
+
+					&.show{
+						opacity:1;
+					}
+					& div{
+						padding:15px 17px;
+						background-color:#fafafa;
+						text-align:center;
+						color:#000;
+						font-size:14px;
+						box-shadow:0 6px 13px 0 rgba(0, 0, 0, 0.15);
+						@include radius(8px);
+						&:after, &:before{
+							content:"";
+							position:absolute;
+							top:-16px;
+							left:27px;
+							width:0px;
+							height:0px;
+							pointer-events:none;
+							border:medium solid transparent;
+							z-index:200;
+						}
+						&:after{
+							margin-left:-10px;
+							border-bottom-color:#fafafa;
+							border-width:8px;
+						}
+ 					}
+				}
+				.ticket_qr_small{
+					position:absolute;
+					top:16px;
+					right:16px;
+					padding:10px;
+					background-color:#fff;
+					cursor:pointer;
+					@include radius(10px);
+				}
+				.ticket_qr_big{
+					display:none;
+					position:absolute;
+					top:72px;
+					right:16px;
+					padding:32px;
+					background-color:#fff;
+					box-shadow:0 6px 9px 0 rgba(0, 0, 0, 0.1);
+					@include radius(10px);
+
+					&.show{
+						display:block;
+					}
+				}
+			}
+		}
+		& .title{
+			padding-top:32px;
+			padding-bottom:41px;
+			color:#000;
+			font-size:24px;
+			font-weight:bold;
+			@include respond-to(tablet-m){
+				font-size:16px;
+			}
+			&.nopadd2{
+				padding-bottom:0px;
+			}
+		}
+		& .ticket_title{
+			color:#808080;
+		}
+		& .title_small{
+			padding-bottom:29px;
+			color:#000;
+			font-size:16px;
+			font-weight:bold;
+			@include respond-to(tablet-m){
+				font-size:14px;
+			}
+		}
+		& .title2{
+			font-weight:bold;
+		}
+		& .text{
+			padding-bottom:10px;
+			line-height:22px;
+			color:#000;
+			font-size:14px;
+		}
+		& .price{
+			color:#000;
+			font-size:32px;
+		}
+		& .circles{
+			position:relative;
+			height:100px;
+			margin-top:-35px;
+			margin-bottom:32px;
+			background-color:#000;
+			overflow:hidden;
+			&.success{
+				& div{
+					position:absolute;
+					z-index:1;
+				}
+				& div:nth-child(1){
+					top:80px;
+					left:-10px;
+					width:25px;
+					height:25px;
+					@include blur(#5ca918, 12px);
+				}
+				& div:nth-child(2){
+					top:-40px;
+					left:55px;
+					width:120px;
+					height:120px;
+					@include blur(#5ca918, 33px);
+				}
+				& div:nth-child(3){
+					top:40px;
+					left:220px;
+					width:20px;
+					height:20px;
+					@include blur(#5ca918, 7px);
+				}
+				& div:nth-child(4){
+					top:45px;
+					left:280px;
+					width:35px;
+					height:35px;
+					@include blur(#5ca918, 15px);
+				}
+				& div:nth-child(5){
+					top:-20px;
+					left:360px;
+					width:60px;
+					height:60px;
+					@include blur(#5ca918, 30px);
+				}
+			}
+			&.fail{
+				& div{
+					position:absolute;
+					z-index:1;
+				}
+				& div:nth-child(1){
+					top:80px;
+					left:-10px;
+					width:25px;
+					height:25px;
+					@include blur(#bb4138, 12px);
+				}
+				& div:nth-child(2){
+					top:-40px;
+					left:55px;
+					width:120px;
+					height:120px;
+					@include blur(#bb4138, 33px);
+				}
+				& div:nth-child(3){
+					top:40px;
+					left:220px;
+					width:20px;
+					height:20px;
+					@include blur(#bb4138, 7px);
+				}
+				& div:nth-child(4){
+					top:45px;
+					left:280px;
+					width:35px;
+					height:35px;
+					@include blur(#bb4138, 15px);
+				}
+				& div:nth-child(5){
+					top:-20px;
+					left:360px;
+					width:60px;
+					height:60px;
+					@include blur(#bb4138, 30px);
+				}
+			}
+		}
+		& input[type="Radio"]{
+			display:none;
+		}
+		& input[type="Radio"]:checked + .label{
+			background:url("../img/ico_radio_active.png") no-repeat;
+		}
+		& .label{
+			margin-right:5px;
+			background:url("../img/ico_radio.png") no-repeat;
+			vertical-align:middle;
+		}
+		& .label{
+			display:inline-block;
+			width:26px;
+			height:26px;
+		}
+		& input[type="Text"], & textarea{
+			width:100%;
+			height:56px;
+			margin-bottom:16px;
+			padding-left:20px;
+			color:#000;
+			font-size:14px;
+			font-family:"GraphikLCG", Arial;
+			background-color:#FFFFFF;
+			box-shadow:0 6px 14px 0 rgba(0, 0, 0, 0.15);
+			box-sizing:border-box;
+			border:0px;
+			@include radius(8px);
+
+			&.error{
+				box-shadow:0 6px 14px 0 rgba(244, 66, 54, 0.5);
+			}
+		}
+		& textarea{
+			height:180px;
+			padding:20px;
+		}
+		& .dotted{
+			clear:both;
+			height:3px;
+			margin:13px 0px;
+			background:url("../img/dotted_double.gif") repeat-x;
+		}
+		& .bg_grey{
+			padding:24px 32px;
+			background-color:#F2F2F2;
+			box-sizing:border-box;
+			@include respond-to(tablet-s){
+				position:absolute;
+				width:100%;
+				bottom:0px;
+				&.relative{
+					position:relative;
+				}
+			}
+			@include respond-to(mobile-m){
+				padding:24px 16px;
+			}
+
+			& .title2{
+				padding-bottom:16px;
+			}
+			& .send_form{
+				position:relative;
+				height:60px;
+				padding:20px 20px 5px;
+				background-color:#fff;
+				box-shadow:0 6px 14px 0 rgba(0,0,0,0.15);
+				@include radius(8px);
+
+				& .input{
+					float:left;
+					width:70%;
+				}
+				& input{
+					height:20px;
+					padding-left:0px;
+					color:#000;
+					font-size:14px;
+					box-shadow:none;
+					border:0px;
+					@include radius(0px);
+				}
+				& .send{
+					float:right;
+					width:30%;
+					text-align:right;
+					& a{
+						display:inline-block;
+						padding-top:5px;
+						color:#999999;
+						font-size:13px;
+						font-weight:bold;
+						&.active{
+							cursor:pointer;
+							color:#F44236;
+						}
+					}
+				}
+				& .sent_block{
+					display:none;
+					position:absolute;
+					top:23px;
+					left:20px;
+					width:100%;
+
+					&.show{
+						display:block;
+					}
+					& .ico_ok{
+						float:left;
+						width:22px;
+						height:16px;
+						background:url("../img/ico_ok.svg") no-repeat;
+					}
+					& .message{
+						float:left;
+						color:#000;
+					}
+					& .ico_close{
+						float:right;
+						width:16px;
+						height:16px;
+						margin-right:50px;
+						background-image:url("../img/ico_cross.svg");
+						background-repeat:no-repeat;
+						background-position:center center;
+						background-size:80% auto;
+						opacity:.4;
+						cursor:pointer;
+						color:#ccc;
+
+						&:hover, &:focus{
+							opacity:1;
+						}
+					}
+				}
+			}
+			&.two{
+				& .btn{
+					width:47%;
+				}
+			}
+		}
+		& .btn{
+			display:inline-block;
+			width:100%;
+			&.cancel{
+				width:144px;
+				& a{
+					cursor:pointer;
+					color:#000;
+				}
+			}
+			&.confirm{
+				padding-left:16px;
+				width:144px;
+				& a{
+					background-color:#F44236;
+					color:#fff;
+					cursor:pointer;
+				}
+			}
+			& a{
+				display:block;
+				width:100%;
+				padding:19px 0px;
+				background-color:#FBFBFB;
+				box-shadow:0 6px 13px 0 rgba(0, 0, 0, 0.1);
+				text-align:center;
+				color:#B3B3B3;
+				font-size:15px;
+				font-weight:bold;
+				border:2px solid #E6E6E6;
+				@include radius(8px);
+
+				&.active{
+					background-color:#F44236;
+					color:#fff;
+					cursor:pointer;
+					border:0px;
+				}
+			}
+		}
+		& .error{
+			& .btn{
+				width:168px !important;
+			}
+		}
+		& .col1{
+			float:left;
+			position:relative;
+			width:300px;
+			padding:47px 56px;
+			box-sizing:border-box;
+			z-index:1;
+			@include respond-to(tablet-s){
+				float:none;
+				width:100%;
+				padding:30px 56px;
+			}
+			@include respond-to(mobile-m){
+				padding:30px 20px;
+			}
+
+			& .logo{
+				position:absolute;
+				top:83px;
+				left:0px;
+				right:0px;
+				width:214px;
+				height:109px;
+				margin:auto;
+				background-image:url("../img/logo_modal.png");
+				@include respond-to(tablet-s){
+					top:65px;
+				}
+			}
+			& .circle{
+				display:inline-block;
+				width:165px;
+				height:165px;
+				padding:9px;
+				border:1px solid #F5F5F5;
+				@include radius(200px);
+
+				& > div{
+					width:146px;
+					height:146px;
+					padding:9px;
+					border:1px solid #F5F5F5;
+					@include radius(200px);
+
+					& div{
+						width:126px;
+						height:126px;
+						background:linear-gradient(180deg, #EDEDED 0%, #CCCCCC 100%);
+						@include radius(200px);
+					}
+				}
+			}
+			& .title{
+				padding:31px 0px 15px;
+				font-size:20px;
+				font-weight:normal;
+			}
+			& .price{
+				color:#000;
+				font-size:32px;
+			}
+		}
+		& .col2{
+			float:left;
+			width:350px;
+			padding:64px 56px;
+			box-sizing:border-box;
+			border-left:1px solid #EDEDED;
+			@include respond-to(tablet-s){
+				float:none;
+				width:100%;
+				padding:30px 56px;
+			}
+			@include respond-to(mobile-m){
+				padding:30px 20px;
+			}
+			& .btn{
+				width:auto;
+				margin-top:31px;
+				& a{
+					width:auto;
+					padding:14px 32px;
+				}
+			}
+		}
+		& .title2{
+			padding-bottom:23px;
+			color:#000;
+		}
+		& .list{
+			& .email{
+				float:left;
+				width:65%;
+				padding:5px 0px 17px;
+				word-wrap:break-word;
+				color:#000;
+				@include respond-to(mobile-s){
+					float:none;
+					width:100%;
+					padding-bottom:0px;
+				}
+			}
+			& .time{
+				float:right;
+				width:35%;
+				padding:5px 0px 17px;
+				text-align:right;
+				color:#808080;
+				@include respond-to(mobile-s){
+					float:none;
+					width:100%;
+					padding-bottom:3px;
+					text-align:left;
+				}
+			}
+		}
+	}
+/* ----------------------------------------- */
+/*              /// Modal ///                */
+/* ----------------------------------------- */

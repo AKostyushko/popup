@@ -1,0 +1,374 @@
+.main-block{
+	height:100%;
+	align-items:stretch;
+}
+.colc{
+	flex-basis:100%;
+}
+.colr{
+	flex:0 0 320px;
+	position:relative;
+	background-color:#fff;
+	&__logo{
+		position:fixed;
+		top:0px;
+		bottom:0px;
+		width:320px;
+		height:100vh;
+		background:url("../img/logo_big.png") no-repeat center center;
+	}
+}
+.block-white{
+	background-color:#fff;
+	@include radius(8px);
+	@include shaddow(0 16px 24px 0 rgba(0,0,0,0.1));
+	&__padding{
+		padding:24px 32px;
+	}
+	&__margin{
+		margin:0px 24px 24px;
+	}
+}
+.main-title{
+	padding-bottom:26px;
+	color:#333333;
+	font-size:12px;
+	font-weight:500;
+	text-transform:uppercase;
+	&__padding{
+		padding:24px 32px 32px;
+	}
+	&__icon-bg{
+		display:inline-block;
+		margin-right:12px;
+		background:linear-gradient(135deg, #929292 0%, #595959 100%);
+		vertical-align:middle;
+		@include radius(60px);
+	}
+	&__icon{
+		display:inline-block;
+		width:24px;
+		height:24px;
+		background:url("../img/arrow_left.svg") no-repeat center center;
+	}
+}
+.question{
+	position:absolute;
+	top:15px;
+	right:18px;
+	width:24px;
+	height:24px;
+	background:#d8d8d8 url("../img/question.svg") no-repeat center center;
+	cursor:pointer;
+	@include radius(56px);
+	&:hover{
+		background:#808080 url("../img/question.svg") no-repeat center center;
+	}
+}
+.progress
+{
+	position:relative;
+	overflow:hidden;
+	font:22px Arial, Tahoma, sans-serif;
+	&__html{
+		position:absolute;
+		width:0;
+		height:0;
+		left:-777px;
+		overflow:hidden;
+	}
+	&__value{
+		display:block;
+		text-align:center;
+		line-height:21px;
+		color:#333;
+	}
+	&__bg{
+		position:relative;
+		height:4px;
+		background:#e6e9ed;
+		overflow:hidden;
+		@include radius(4px);
+	}
+	&__bar{
+		position:absolute;
+		top:0;
+		left:0;
+		height:100%;
+		overflow:hidden;
+		&:after{
+			position:absolute;
+			content:"";
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-size:40px 40px;
+		}
+	}
+	&__bar_green{
+		background:linear-gradient(90deg, #77B983 0%, #199E07 100%);
+	}
+	&__bar_yellow{
+		background:linear-gradient(90deg, #EDC72C 0%, #C3B505 100%);
+	}
+	&__bar_orange{
+		background:linear-gradient(90deg, #EDAA2C 0%, #C38205 100%);
+	}
+}
+.email{
+	background-image:url("../img/email.svg");
+	background-repeat:no-repeat;
+	background-position:center center;
+	cursor:pointer;
+	&:hover{
+		background-image:url("../img/email_white.svg");
+	}
+}
+.phone{
+	background-image:url("../img/phone.svg");
+	background-repeat:no-repeat;
+	background-position:center center;
+	cursor:pointer;
+	&:hover{
+		background-image:url("../img/phone_white.svg");
+	}
+}
+.skype{
+	background-image:url("../img/skype.png");
+	background-repeat:no-repeat;
+	background-position:center center;
+	cursor:pointer;
+	&:hover{
+		background-image:url("../img/skype_white.png");
+		background-size:47% auto;
+	}
+}
+.button{
+	float:right;
+	background-color:#fff;
+	cursor:pointer;
+	color:#808080;
+	font-weight:600;
+	text-transform:uppercase;
+	@include radius(6px);
+	&:hover{
+		@include shaddow(0 6px 8px 0 rgba(0,0,0,0.1));
+	}
+	&:focus{
+		background-color:#F7F7F7;
+	}
+}
+.button_big{
+	padding:14px 24px;
+	font-size:13px;
+	font-weight:600;
+	border:1px solid #BFBFBF;
+}
+.button_small{
+	padding:8px 12px;
+	font-size:12px;
+	border:1px solid #D9D9D9;
+}
+.button_red, .button_red_big{
+	padding:8px 12px;
+	background-color:#E40000;
+	color:#fff;
+	font-size:12px;
+	border:0px;
+	&:hover{
+		@include shaddow(0 6px 8px 0 rgba(0,0,0,0.2));
+	}
+	&:focus{
+		background-color:#CC0000 !important;
+	}
+}
+.button_red_big{
+	padding:14px 24px;
+}
+.grayscale{
+	@extend %grayscale;
+}
+.popup-small{
+	position:absolute;
+	width:260px;
+	padding:16px;
+	background:rgba(0, 0, 0, 0.8);
+	z-index:100;
+	@include radius(6px);
+	&__text{
+		line-height:17px;
+		text-align:left;
+		color:#fff;
+		font-size:14px;
+		font-weight:500;
+	}
+	&__text-small{
+		padding-bottom:5px;
+		line-height:16px;
+		text-align:left;
+		color:#fff;
+		font-size:13px;
+	}
+	&__buttons{
+		padding-top:12px;
+	}
+	&__button{
+		display:inline-block;
+		width:108px;
+		padding:9px 0px;
+		cursor:pointer;
+		text-align:center;
+		font-size:11px;
+		font-weight:600;
+		text-transform:uppercase;
+		@include radius(4px);
+	}
+	&__button-cancel, &__button-copy, &__button-call{
+		background-color:#FFFFFF;
+		color:#808080;
+		border:1px solid #D9D9D9;
+	}
+	&__button-cancel, &__button-copy{
+		margin-right:12px;
+	}
+	&__button-confirm{
+		background-color:#E40000;
+		color:#fff;
+		border:1px solid #E40000;
+	}
+}
+.link-red{
+	color:#E40000;
+	&:hover{
+		color:#AF1313;
+	}
+}
+.radio{
+	& input[type="radio"]{
+		display:none;
+		&:checked+.label{
+			background:url("/img/radio_box_active.png") no-repeat 0px 3px;
+		}
+	}
+	& .label{
+		display:inline-block;
+	    width:30px;
+	    height:33px;
+		vertical-align:middle;
+	}
+	& .label{
+		background:url("/img/radio_box.png") no-repeat 0px 3px;
+	}
+}
+.onload-popup{
+	width:584px;
+	height:450px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	color:#000;
+	@include radius(8px);
+
+	&__header{
+		position:relative;
+		height:160px;
+		background:url("/img/popup_bg.png") no-repeat;
+	}
+	&__title_white{
+		position:absolute;
+		left:32px;
+		bottom:30px;
+		line-height:29px;
+		color:#fff;
+		font-size:24px;
+		font-weight:600;
+		z-index:1;
+	}
+	&__content{
+		padding:32px;
+		background-color:#fff;
+		@include radius_one(8px, bottom, left);
+		@include radius_one(8px, bottom, right);
+	}
+	&__title_black{
+		padding-bottom:16px;
+		line-height:28px;
+		font-size:20px;
+	}
+	&__text{
+		line-height:20px;
+		font-size:14px;
+		& ul{
+			margin:10px 0px;
+		}
+		& li{
+			padding:5px 0px 5px 20px;
+			background:url("/img/range_red.png") no-repeat 6px 12px;
+			list-type:none;
+		}
+		& a{
+			color:#E40000;
+		}
+	}
+	&__buttons{
+		padding-top:32px;
+	}
+	.button{
+		float:none;
+	}
+	&__continue{
+		margin-right:16px;
+	}
+}
+.popup-not-available{
+	width:584px;
+	margin:auto;
+	color:#000;
+	@include radius(8px);
+
+	&__header{
+		position:relative;
+		height:120px;
+		background-color:#E40000;
+		@include radius_one(8px, top, left);
+		@include radius_one(8px, top, right);
+	}
+	&__title_white{
+		position:absolute;
+		left:32px;
+		top:30px;
+		line-height:29px;
+		color:#fff;
+		font-size:24px;
+		font-weight:600;
+		z-index:1;
+	}
+	&__content{
+		padding:32px;
+		background-color:#fff;
+		@include radius_one(8px, bottom, left);
+		@include radius_one(8px, bottom, right);
+	}
+	&__title_black{
+		padding-bottom:16px;
+		line-height:28px;
+		font-size:20px;
+	}
+	&__buttons{
+		padding-top:32px;
+	}
+	.button{
+		float:none;
+	}
+}
+.close{
+	position:absolute;
+	top:16px;
+	right:16px;
+	width:40px;
+	height:40px;
+	background:#FFFFFF url("../img/close.svg") no-repeat center center;
+	cursor:pointer;
+	@include radius(6px);
+}

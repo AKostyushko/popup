@@ -1,0 +1,493 @@
+﻿<!DOCTYPE PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../css/magnific-popup.css"/>
+<link rel="shortcut icon" href="/img/logo.ico"/>
+<script src="../js/jquery.js"></script>
+<script src="../js/magnific-popup.js"></script>
+<script src="../js/partials/popup.js"></script>
+<script src="../js/partials/achievements.js"></script>
+<script src="../js/partials/contacts.js"></script>
+<script src="../js/partials/copy.js"></script>
+<script src="../js/partials/requisites.js"></script>
+</head>
+<body>
+<div id="popup-not-available" class="popup-not-available mfp-hide">
+	<div class="popup-not-available__header">
+		<div class="close" id="close"></div>
+		<div class="popup-not-available__title_white">Данный функционал<br>временно недоступен</div>
+	</div>
+	<div class="popup-not-available__content">
+		<div class="popup-not-available__title_black">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</div>
+		<div class="onload-popup__buttons">
+			<button class="button button_big onload-popup__continue">Продолжить</button>
+		</div>
+	</div>
+</div>
+<div class="flex main-block">
+	<div class="colc">
+		<div class="header">
+			<a href="index.html">
+				<div class="header__logo">
+					<div class="header__logo-title">Mercury</div>
+					<div class="header__logo-title_red">Global</div>
+				</div>
+			</a>
+			<div class="header__menu menu">
+				<ul>
+					<li class="menu__li"><a href="index.html" class="menu__link">Главная</a></li>
+					<li class="menu__li"><a href="" class="menu__link menu__link_disabled">Программы</a></li>
+					<li class="menu__li"><a href="" class="menu__link menu__link_disabled">Структура</a></li>
+					<li class="menu__li"><a href="" class="menu__link menu__link_disabled">Финансы</a></li>
+					<li class="menu__li"><a href="" class="menu__link menu__link_disabled">План развития</a></li>
+					<li class="menu__li"><a href="" class="menu__link menu__link_disabled">Календарь</a></li>
+					<li class="menu__li"><a href="profile.html" class="menu__link menu__link_active">Мой профиль</a></li>
+				</ul>
+			</div>
+			<div class="c"></div>
+		</div>
+		<div class="block-white block-white__margin achievements">
+			<div class="block-white__padding">
+				<div class="main-title">Мои достижения</div>
+				<div class="flex">
+					<div class="achievements__profile">
+						<div class="achievements__personal personal">
+							<div class="personal__photo"><img src="../img/photo.png" alt=""/></div>
+							<div class="personal__info">
+								<div class="personal__name">Amber<br>Cattermole</div>
+								<div class="personal__status personal__status_red">Хранитель</div>
+								<div class="personal__location">Канада, Квебек</div>
+							</div>
+							<div class="c"></div>
+						</div>
+						<div class="achievements__fullness">
+							<div class="achievements__fullness-title">Заполненость профиля</div>
+							<div class="achievements__fullness-percents">80%</div>
+							<div class="question"></div>
+							<div class="achievements__fullness-progress progress">
+								<progress class="progress__html" max="100" value="0"></progress>
+								<div class="progress__value"></div>
+								<div class="progress__bg"><div class="progress__bar progress__bar_green" style="width:70%;"></div></div>
+							</div>
+							<div class="achievements__fullness-statuses">
+								<div class="achievements__fullness-beginer">Начальный</div>
+								<div class="achievements__fullness-average">Средний</div>
+								<div class="achievements__fullness-advanced">Продвинутый</div>
+							</div>
+						</div>
+					</div>
+					<div class="achievements__statuses">
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_enabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">6</div>
+								</div>
+								<div class="achievements__status-name">Пригласитель</div>
+							</div>
+						</div>
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_disabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">0</div>
+								</div>
+								<div class="achievements__status-name">Наставник</div>
+							</div>
+							<div class="popup-small hidden" id="popup-tutor">
+								<div class="popup-small__text">Хотите подать заявку на<br>получение статуса Наставника?</div>
+								<div class="popup-small__text popup-small__text_hidden hidden">Вы подали заявку на<br>получение статуса Наставника.</div>
+								<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-cancel" onclick="hidePopup('popup-tutor');">Отмена</a><a class="popup-small__button popup-small__button-confirm" onclick="showPopupMessage('popup-tutor');">Подтвердить</a></div>
+							</div>
+						</div>
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_enabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">7</div>
+								</div>
+								<div class="achievements__status-name">Лидер</div>
+							</div>
+						</div>
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_enabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">7</div>
+								</div>
+								<div class="achievements__status-name">Спикер</div>
+							</div>
+						</div>
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_disabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">0</div>
+								</div>
+								<div class="achievements__status-name">Консультант</div>
+							</div>
+							<div class="popup-small hidden" id="popup-consultant">
+								<div class="popup-small__text">Хотите подать заявку на<br>получение статуса Консультанта?</div>
+								<div class="popup-small__text popup-small__text_hidden hidden">Вы подали заявку на<br>получение статуса Консультанта.</div>
+								<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-cancel" onclick="hidePopup('popup-consultant');">Отмена</a><a class="popup-small__button popup-small__button-confirm" onclick="showPopupMessage('popup-consultant');">Подтвердить</a></div>
+							</div>
+						</div>
+						<div class="achievements__status">
+							<div class="achievements__block achievements__status_disabled">
+								<div class="achievements__status-image">
+									<div class="achievements__status-number">0</div>
+								</div>
+								<div class="achievements__status-name">Брокер</div>
+							</div>
+							<div class="popup-small hidden" id="popup-broker">
+								<div class="popup-small__text">Хотите подать заявку на<br>получение статуса Брокера?</div>
+								<div class="popup-small__text popup-small__text_hidden hidden">Вы подали заявку на<br>получение статуса Брокера.</div>
+								<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-cancel" onclick="hidePopup('popup-broker');">Отмена</a><a class="popup-small__button popup-small__button-confirm" onclick="showPopupMessage('popup-broker');">Подтвердить</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block-grey flex">
+				<div class="block-white">
+					<div  class="block-white__padding">
+						<div class="block-grey__title">Мои<br>приглашенные</div>
+						<div class="block-grey__number">46</div>
+						<div class="c"></div>
+					</div>
+				</div>
+				<div class="block-white">
+					<div  class="block-white__padding">
+						<div class="block-grey__title">Активированные<br>мной</div>
+						<div class="block-grey__number">540</div>
+						<div class="c"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block-white block-white__margin referal">
+			<div class="block-white__padding">
+				<div class="referal__icon-bg"><div class="referal__icon"></div></div>
+				<div class="referal__text">
+					<div class="referal__title">Моя реферальная ссылка</div>
+					<div class="referal__url">https://mercury.gl/cabinet</div>
+				</div>
+				<button class="button button_big">Копировать ссылку</button>
+				<div class="c"></div>
+			</div>
+		</div>
+
+		<div class="block-white block-white__margin communications">
+			<div class="block-white__padding">
+				<div class="main-title">Мои связи</div>
+				<div class="communications__block">
+					<div class="communications__photo"><img src="../img/photo7.png" alt=""/></div>
+					<div class="communications__name">Gail<br>Brigante</div>
+					<div class="communications__status">Участник</div>
+					<div class="communications__status2">Пригласитель</div>
+					<div class="communications__icon email"></div>
+					<div class="communications__icon phone"></div>
+					<div class="communications__icon skype"></div>
+					<div class="popup-small hidden" id="popup-phone1">
+						<div class="popup-small__text-small">Номер телефона</div>
+						<div class="popup-small__text phone-number">217-386-0024</div>
+						<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-copy" onclick="copyPhone('popup-phone1'); hidePopup('popup-phone1', event);">Копировать</a><a href="tel:217-386-0024" class="popup-small__button popup-small__button-call">Позвонить</a></div>
+					</div>
+				</div>
+				<div class="communications__block">
+					<div class="communications__photo"><img src="../img/photo1.png" alt=""/></div>
+					<div class="communications__name">Benny<br>Blanco</div>
+					<div class="communications__status communications__status_red">Хранитель</div>
+					<div class="communications__status2">Активатор</div>
+					<div class="communications__icon email"></div>
+					<div class="communications__icon phone"></div>
+					<div class="communications__icon skype"></div>
+					<div class="popup-small hidden" id="popup-phone2">
+						<div class="popup-small__text-small">Номер телефона</div>
+						<div class="popup-small__text phone-number">217-386-0024</div>
+						<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-copy" onclick="copyPhone('popup-phone2'); hidePopup('popup-phone2', event);">Копировать</a><a href="tel:217-386-0024" class="popup-small__button popup-small__button-call">Позвонить</a></div>
+					</div>
+				</div>
+				<div class="communications__block">
+					<div class="communications__photo"><img src="../img/photo2.png" alt=""/>
+						<div class="communications__edit"></div>
+					</div>
+					<div class="communications__name">Donnovan<br>Ladley</div>
+					<div class="communications__status communications__status_red">Хранитель</div>
+					<div class="communications__status2">Наставник</div>
+					<div class="communications__icon email"></div>
+					<div class="communications__icon phone"></div>
+					<div class="communications__icon skype"></div>
+					<div class="popup-small hidden" id="popup-phone3">
+						<div class="popup-small__text-small">Номер телефона</div>
+						<div class="popup-small__text phone-number">217-386-0024</div>
+						<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-copy" onclick="copyPhone('popup-phone3'); hidePopup('popup-phone3', event);">Копировать</a><a href="tel:217-386-0024" class="popup-small__button popup-small__button-call">Позвонить</a></div>
+					</div>
+				</div>
+				<div class="communications__block">
+					<div class="communications__photo"><img src="../img/photo4.png" alt=""/></div>
+					<div class="communications__name">Emma<br />Brightberry</div>
+					<div class="communications__status communications__status_red">Хранитель</div>
+					<div class="communications__status2">Лидер</div>
+					<div class="communications__icon email"></div>
+					<div class="communications__icon phone"></div>
+					<div class="communications__icon skype"></div>
+					<div class="popup-small hidden" id="popup-phone4">
+						<div class="popup-small__text-small">Номер телефона</div>
+						<div class="popup-small__text phone-number">217-386-0024</div>
+						<div class="popup-small__buttons"><a class="popup-small__button popup-small__button-copy" onclick="copyPhone('popup-phone4'); hidePopup('popup-phone4', event);">Копировать</a><a href="tel:217-386-0024" class="popup-small__button popup-small__button-call">Позвонить</a></div>
+					</div>
+				</div>
+<!--
+				<div class="communications__block communications__block_disabled">
+					<div class="communications__stub"></div>
+					<div class="communications__status-disabled">Лидер</div>
+					<div class="communications__text">У вас пока<br>нет лидера</div>
+					<a href="" class="communications__link">Выбрать лидера</a>
+				</div>
+-->
+				<div class="c"></div>
+			</div>
+		</div>
+
+		<div class="block-white block-white__margin contacts">
+			<div class="block-white__padding">
+				<div class="main-title">Мои контактные данные</div>
+				<button class="button button_small">Редактировать</button>
+				<div id="contacts-read">
+					<div class="contacts__column contacts__column_left">
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__country"></div>
+							</div>
+							<div class="contacts__title">Страна</div>
+							<div class="contacts__value">Канада</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__city"></div>
+							</div>
+							<div class="contacts__title">Город</div>
+							<div class="contacts__value">Квебек</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__phone"></div>
+							</div>
+							<div class="contacts__title">Телефон</div>
+							<div class="contacts__value">217-386-0024</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__email"></div>
+							</div>
+							<div class="contacts__title">Email</div>
+							<div class="contacts__value">kassiemjimenez@teleworm.us</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__birthday"></div>
+							</div>
+							<div class="contacts__title">Дата рождения</div>
+							<div class="contacts__value">7 октября 1987</div>
+						</div>
+					</div>
+					<div class="contacts__column contacts__column_right">
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__skype"></div>
+							</div>
+							<div class="contacts__title">Skype</div>
+							<div class="contacts__value">a.cattermole</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__viber"></div>
+							</div>
+							<div class="contacts__title">Viber</div>
+							<div class="contacts__value">viber.ac.1987</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__whatsapp"></div>
+							</div>
+							<div class="contacts__title">WhatsApp</div>
+							<div class="contacts__value">loremipsum</div>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__icon-bg">
+								<div class="contacts__icon-img contacts__wechat"></div>
+							</div>
+							<div class="contacts__title">Wechat</div>
+							<div class="contacts__value">dolor.sitamet</div>
+						</div>
+					</div>
+					<div class="c"></div>
+				</div>
+				<div id="contacts-edit" class="hidden">
+					<div class="contacts__column contacts__column_left">
+						<div class="contacts__block">
+							<div class="contacts__title2">Страна</div>
+							<select name="country" class="contacts__select"><option value="0"></option><option value="1" selected>Канада</option><option value="2">США</option></select>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">Город</div>
+							<select name="city" class="contacts__select"><option value="0"></option><option value="1" selected>Квебек</option><option value="2">Оттава</option></select>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">Телефон</div>
+							<input name="phone" class="contacts__input" value="217-386-0024"/>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">Email</div>
+							<input name="email" class="contacts__input contacts__input_disabled" value="kassiemjimenez@teleworm.us"/>
+						</div>
+						<div class="contacts__block contacts__block_last">
+							<div class="contacts__title">Дата рождения</div>
+							<div class="contacts__birthday-block">
+								<div class="contacts__birthday-col"><input name="day" class="contacts__input" value="7"/></div>
+								<div class="contacts__birthday-col"><select name="month" class="contacts__select"><option value="1" selected>Окт</option><option value="2">Ноя</option></select></div>
+								<div class="contacts__birthday-col"><select name="year" class="contacts__select"><option value="1" selected>1987</option><option value="2">1988</option></select></div>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+					<div class="contacts__column contacts__column_right">
+						<div class="contacts__block">
+							<div class="contacts__title2">Skype</div>
+							<input name="skype" class="contacts__input" value="a.cattermole"/>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">Viber</div>
+							<input name="viber" class="contacts__input" value="viber.ac.1987"/>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">WhatsApp</div>
+							<input name="whatsapp" class="contacts__input" value="loremipsum"/>
+						</div>
+						<div class="contacts__block">
+							<div class="contacts__title2">Wechat</div>
+							<input name="wechat" class="contacts__input" value="dolor.sitamet"/>
+						</div>
+					</div>
+					<div class="c"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block-white block-white__margin requisites">
+			<div class="block-white__padding">
+				<div class="main-title">Мои платежные реквизиты</div>
+				<button class="button button_small button_edit">Редактировать</button>
+				<div id="requisites-read">
+					<div class="requisites__block">
+						<div class="requisites__bg requisites__block_bitcoin">
+							<div class="requisites__title">Bitcoin кошелек</div>
+							<div class="requisites__value">1C5LqLaDJRFf2RpMKh9ErZgpjDB2DK7Z1</div>
+						</div>
+					</div>
+					<div class="requisites__block">
+						<div class="requisites__bg requisites__block_perfectMoney">
+							<div class="requisites__title">PerfectMoney кошелек</div>
+							<div class="requisites__value">U27107371</div>
+						</div>
+					</div>
+					<div class="requisites__block">
+						<div class="requisites__bg requisites__block_ethereum">
+							<div class="requisites__title">Ethereum кошелек</div>
+							<div class="requisites__value">1C5LqLaDJRFf2RpMKh9ErZgpjDB2DK7Z1</div>
+						</div>
+					</div>
+					<div class="requisites__block">
+						<div class="requisites__bg requisites__block_litecoin">
+							<div class="requisites__title">Litecoin кошелек</div>
+							<div class="requisites__value">1C5LqLaDJRFf2RpMKh9ErZgpjDB2DK7Z1</div>
+						</div>
+					</div>
+					<div class="c"></div>
+				</div>
+				<div id="requisites-edit" class="hidden">
+					<div class="requisites__block">
+						<div class="requisites__title">BitCoin кошелек</div>
+						<div class="requisites__group">
+							<input type="Text" class="requisites__input" placeholder="Введите адрес кошелька" value="1C5LqLaDJRFf2RpMKh9ErZgpjDB2DK7Z1"/>
+						</div>
+						<div class="requisites__title">PerfectMoney кошелек</div>
+						<div class="requisites__title_small requisites__padding-top">Другой кошелек Perfect Money </div>
+						<div class="requisites__group flex">
+							<div class="requisites__group-flex"><input type="Text" class="requisites__input" placeholder="Введите адрес кошелька" value=""/></div>
+							<div class="requisites__group-flex"><button class="button requisites__button-default requisites__button-default_red">По умолчанию</button></div>
+						</div>
+						<div class="requisites__title_small">Advanced Cash кошелек</div>
+						<div class="requisites__group flex">
+							<div class="requisites__group-flex"><input type="Text" class="requisites__input" placeholder="Введите адрес кошелька" value=""/></div>
+							<div class="requisites__group-flex"><button class="button requisites__button-default requisites__button-default_grey">По умолчанию</button></div>
+						</div>
+						<div class="requisites__title">Ethereum кошелек</div>
+						<div class="requisites__group">
+							<input type="Text" class="requisites__input" placeholder="Введите адрес кошелька" value=""/>
+						</div>
+						<div class="requisites__title">Litecoin кошелек</div>
+						<div class="requisites__group">
+							<input type="Text" class="requisites__input" placeholder="Введите адрес кошелька" value=""/>
+						</div>
+						<div class="requisites__title">Euro кошелек</div>
+						<div class="requisites__title_small radio"><input name="euro_money_storage" id="euro_money_storage" type="radio" value="1"/><label for="euro_money_storage" class="label"></label> Euro кошелек в Money Storage <a href="" class="requisites__link">Привязать</a></div>
+						<div class="requisites__buttons"><a class="requisites__button_red button_red">Сохранить</a><a class="button button_big requisites__button_grey">Отмена</a></div>
+					</div>
+					<div class="requisites__block">
+						<div class="requisites__bg_grey">
+							<div class="requisites__bigtext">Уважаемые участники, вы можете выбрать приоритетный кошелёк для подачи запросов средств из системы Mercury Global. Мы рекомендуем Вам пользоваться только надёжным Bitcoin кошельком с высоким уровнем защиты.</div>
+							<div class="requisites__text">Примером такого кошелька является Bitcoin кошелёк наших партнёров - международной платёжной системы Money Storage. Также вы можете подавать запрос средств на любой другой Bitcoin кошелёк на своё усмотрение.<br /><br />
+								ВНИМАНИЕ: тщательно проверяйте правильность введенного номера (адреса) вашего Bitcoin кошелька перед сохранением платёжных реквизитов. Mercury Global не гарантирует возврата средств, если номер (адрес) Bitcoin кошелька будет указан неверно. Смена кошелька производиться только в исключительных случаях и с обязательным подтверждением от Вашего Хранителя и Топ Лидера структуры.
+							</div>
+						</div>
+					</div>
+					<div class="c"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="help">
+			<div class="help__blocks">
+				<div class="help__block">
+					<div class="block-white block-white__margin help__support">
+						<div class="block-white__padding flex">
+							<div class="help__icon-bg help__icon-bg_support"><div class="help__icon help__icon_support"></div></div>
+							<div class="help__info">
+								<div class="help__title">Центр поддержки пользователей</div>
+								<div class="help__text">Если у вас возникли трудности или проблемы с использованием сервиса, перейдите в техподдержку.</div>
+								<form action="support.html">
+								<button class="button button_big">Перейти в техподдержку</button>
+								</form>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+				</div>
+				<div class="help__block">
+					<div class="block-white block-white__margin help__docs">
+						<div class="block-white__padding flex">
+							<div class="help__icon-bg help__icon-bg_docs"><div class="help__icon help__icon_docs"></div></div>
+							<div class="help__info">
+								<div class="help__title">Документы</div>
+								<div class="help__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+								<form action="docs.html">
+								<button class="button button_big">Посмотреть документы</button>
+								</form>
+							</div>
+							<div class="c"></div>
+						</div>
+					</div>
+				</div>
+				<div class="c"></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="colr"><div class="colr__logo"></div></div>
+</div>
+</body>

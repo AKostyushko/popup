@@ -1,0 +1,115 @@
+.accounts{
+	&__list{
+		padding-bottom:32px;
+		font-size:20px;
+		font-weight:500;
+	}
+	&__paysystem{
+		display:inline-block;
+		padding-right:24px;
+		color:#000;
+		&:hover{
+			color:#595959;
+		}
+		&:focus{
+			color:#404040;
+		}
+	}
+	&__paysystem_active{
+		color:#E40000;
+		&:hover, &:focus{
+			color:#E40000;
+		}
+	}
+	&__item{
+		padding:24px 0px;
+		border-top:1px solid #e1e1e1;
+		@extend %flex;
+	}
+	&__left{
+		flex-basis:50%;
+	}
+	&__right{
+		flex-basis:50%;
+		text-align:right;
+	}
+	&__title{
+		display:inline-block;
+		width:200px;
+		color:#000;
+		font-size:14px;
+		font-weight:500;
+	}
+	&__sum{
+		display:inline-block;
+		color:#808080;
+		font-size:14px;
+		font-weight:500;
+	}
+	&__link{
+		display:inline-block;
+		padding-left:33px;
+		cursor:pointer;
+		color:#808080;
+	}
+}
+
+.account-popup{
+	width:520px;
+	margin:auto;
+	background-color:#fff;
+	@include radius(8px);
+
+	&__way{
+		padding:24px 32px;
+		background-color:#F2F2F2;
+	}
+	&__info{
+		padding:24px 32px 32px;
+	}
+	&__title{
+		padding:30px 32px;
+		color:#333333;
+		font-size:24px;
+		font-weight:600;
+	}
+	&__money-system{
+		float:left;
+		width:50%;
+		margin-top:24px;
+	}
+	&__money_storage{
+		border-right:1px solid #DEDEDE;
+	}
+	&__perfect-money{
+		padding-left:30px;
+	}
+	&__recomend{
+		padding:0px 0px 0px 34px;
+		color:#808080;
+		font-size:13px;
+	}
+	&__title-small{
+		font-size:14px;
+	}
+	&__input{
+		width:100%;
+		margin-top:16px;
+		padding:14px 16px;
+		background-color:#FFFFFF;
+		font-size:14px;
+		font-family:"Graphik LCG", Arial, sans-serif;
+		border:1px solid #E3E3E3;
+		@include radius(8px);
+		@include shaddow(0 6px 10px 0 rgba(0,0,0,0.06));
+	}
+	&__buttons{
+		padding-top:32px;
+	}
+	&__continue{
+		margin-right:16px;
+	}
+	.button{
+		float:none;
+	}
+}

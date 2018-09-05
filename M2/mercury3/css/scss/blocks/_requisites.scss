@@ -1,0 +1,210 @@
+.requisites{
+	position:relative;
+	.button_small, .button_red{
+		position:absolute;
+		top:16px;
+		right:32px;
+	}
+	&__button_red.button_red{
+		position:relative;
+		top:0px;
+		right:auto;
+	}
+	&__button-default{
+		padding:4px 7px;
+		color:#fff;
+		font-size:12px;
+		text-transform:none;
+		border:0px;
+		@include radius(4px);
+	}
+	&__button-default_red{
+		background-color:#E40000;
+		&:focus{
+			background-color:#CC0000;
+		}
+	}
+	&__button-default_grey{
+		background-color:#BFBFBF;
+		&:focus{
+			background-color:#ccc;
+		}
+	}
+	&__button_red{
+		padding:15px 24px;
+		background-color:#E40000;
+		color:#fff;
+		font-size:13px;
+		text-transform:uppercase;
+		@include radius(6px);
+	}
+	&__button_grey{
+		float:none;
+		margin-left:16px;
+		border:1px solid #D9D9D9;
+	}
+	&__buttons{
+		padding-top:46px;
+	}
+	&__block{
+		float:left;
+		width:50%;
+		margin:8px 0px 32px;
+	}
+	&__bg{
+		position:relative;
+		height:104px;
+		padding:24px 32px;
+		background-color:#EDEDED;
+		@include radius(6px);
+		&:before{
+			position:absolute;
+			display:block;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			content:"";
+			background-repeat:no-repeat;
+			background-position:top right;
+		}
+	}
+	&__bg.grayscale{
+		&:before{
+			opacity:.4;
+		}
+	}
+	&__block_bitcoin{
+		margin-right:20px;
+		&:before{
+			background-image:url("../img/bitcoin.png");
+			z-index:1;
+		}
+	}
+	&__block_bitcoin-grayscale{
+		margin-right:20px;
+		&:before{
+			background-image:url("../img/bitcoin_grey.png");
+			z-index:1;
+		}
+	}
+	&__block_perfectMoney{
+		margin-left:20px;
+		&:before{
+			background-image:url("../img/perfect_money.png");
+			z-index:1;
+		}
+	}
+	&__block_perfectMoney-grayscale{
+		margin-left:20px;
+		&:before{
+			background-image:url("../img/perfect_money_grey.png");
+			z-index:1;
+		}
+	}
+	&__block_ethereum{
+		margin-right:20px;
+		&:before{
+			background-image:url("../img/ethereum.png");
+			z-index:1;
+		}
+	}
+	&__block_ethereum-grayscale{
+		margin-right:20px;
+		&:before{
+			background-image:url("../img/ethereum_grey.png");
+			z-index:1;
+		}
+	}
+	&__block_litecoin{
+		margin-left:20px;
+		&:before{
+			background-image:url("../img/litecoin.png");
+			z-index:1;
+		}
+	}
+	&__block_litecoin-grayscale{
+		margin-left:20px;
+		&:before{
+			background-image:url("../img/litecoin_grey.png");
+			z-index:1;
+		}
+	}
+	&__title{
+		position:relative;
+		padding-top:6px;
+		padding-bottom:8px;
+		color:#333333;
+		font-size:20px;
+		z-index:2;
+	}
+	&__title_disabled{
+		color:#808080;
+	}
+	&__title_small{
+		color:#000000;
+		font-size:14px;
+		line-height:17px;
+	}
+	&__value{
+		position:relative;
+		color:#808080;
+		font-size:13px;
+		z-index:2;
+	}
+	&__link{
+		display:inline-block;
+		padding-left:10px;
+		color:#E40000;
+	}
+	&__bg_grey{
+		margin-top:36px;
+		margin-left:44px;
+		padding:24px 32px;
+		background-color:#EDEDED;
+		@include radius(6px);
+	}
+	&__bigtext{
+		padding-bottom:16px;
+		line-height:22px;
+		color:#333;
+		font-size:16px;
+		font-weight:500;
+	}
+	&__text{
+		color:#595959;
+		font-size:14px;
+		line-height:22px;
+	}
+	&__group{
+		margin:8px 0px 32px;
+		padding:14px 16px;
+		border:1px solid #E3E3E3;
+		@include radius(6px);
+		@include shaddow(0 6px 10px 0 rgba(0,0,0,0.06));
+	}
+	&__group.flex{
+		
+	}
+	&__group-flex{
+		&:nth-child(1){
+			flex-basis:100%;
+		}
+		&:nth-child(2){
+			flex:0 0 125px;
+			white-spacing:nowrap;
+		}
+	}
+	&__input{
+		width:100%;
+		height:24px;
+		color:#000000;
+		font-size:14px;
+		font-family:"GraphikLCG", Arial, sans-serif;
+		border:0px;
+	}
+	&__padding-top{
+		padding-top:20px;
+	}
+}
+

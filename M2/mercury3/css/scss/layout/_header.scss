@@ -1,0 +1,60 @@
+.header{
+	margin-bottom:24px;
+	padding-left:12px;
+	padding-right:23px;
+	background-color:#fff;
+	border-right:1px solid #e1e1e1;
+	@include shaddow(0 2px 24px 0 rgba(0,0,0,0.1));
+	&__logo{
+		float:left;
+		padding:12px 0px 16px;
+		background:url("../img/logo.png") no-repeat 12px 16px;
+		font-family:"GothamProLight", Arial, sans-serif;
+	}
+	&__logo-title{
+		padding:10px 0px 0px 64px;
+		line-height:16px;
+		color:#5F5F5F;
+		font-size:16px;
+	}
+	&__logo-title_red{
+		padding:6px 0px 0px 64px;
+		line-height:12px;
+		color:#A30D0D;
+		font-size:13px;
+	}
+}
+.menu{
+	float:right;
+	padding:20px 0px;
+	&__li{
+		display:inline-block;
+	}
+	&__link{
+		display:inline-block;
+		padding:2px 12px;
+		line-height:32px;
+		color:#404040;
+		font-size:14px;
+		@include radius(4px);
+		&:hover{
+			background-color:#F7F7F7;
+		}
+		&:focus{
+			background-color:#EDEDED;
+		}
+	}
+	&__link_active{
+		background-color:#E40000;
+		color:#fff;
+		@include radius(4px);
+		@include shaddow(0 6px 8px 0 rgba(0,0,0,0.2));
+		&:hover, &:focus{
+			background-color:#E40000;
+		}
+	}
+	&__link_disabled{
+		color:#ccc;
+	}
+}
+

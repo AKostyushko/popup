@@ -1,0 +1,110 @@
+.invited{
+	&__list{
+		padding-top:24px;
+	}
+	&__row-title{
+		color:#808080;
+		font-size:13px;
+		& .cell{
+			padding-bottom:13px;
+			&:nth-child(5){
+				text-align:right;
+			}
+		}
+	}
+	&__row-data{
+		& .cell{
+			padding:12px 0px;
+			font-size:14px;
+			border-top:1px solid #E6E6E6;
+			&:nth-child(1){
+				font-weight:bold;
+			}
+			&:nth-child(5){
+				text-align:right;
+			}
+			& img{
+				width:40px;
+				margin-right:14px;
+				vertical-align:middle;
+				@include radius(6px);
+			}
+		}
+	}
+	&__buttons{
+		& a{
+			display:inline-block;
+			width:28px;
+			height:28px;
+			margin-left:8px;
+			background-color:#E6E6E6;
+			cursor:pointer;
+			@include radius(60px);
+			&:hover{
+				background-color:#808080;
+			}
+		}
+		& .email{
+			background-size:50% auto;
+		}
+		& .phone{
+			background-size:40% auto;
+		}
+		& .skype{
+			background-color:#E0E0E0;
+			background-size:50% auto;
+			opacity:.7;
+		}
+	}
+}
+
+.search-block{
+	margin:0px -12px;
+	padding:20px 24px;
+	background-color:#F7F7F7;
+	@include radius(6px);
+
+	&__select-block{
+		float:left;
+		width:25%;
+		padding-right:24px;
+		cursor:pointer;
+	}
+	&__title{
+		color:#808080;
+		font-size:13px;
+	}
+	&__value{
+		padding-top:8px;
+		color:#000;
+		font-size:14px;
+		font-weight:600;
+	}
+	&__arrow{
+		float:right;
+		width:24px;
+		height:40px;
+		background:#fff url("../img/arrow_down.svg") no-repeat center center;
+		border:1px solid #E3E3E3;
+		@include shaddow(0 6px 10px 0 rgba(0,0,0,0.06));
+		@include radius(6px);
+	}
+	&__input-block{
+		float:left;
+		width:50%;
+	}
+	&__input{
+		width:100%;
+		padding:11px 40px 11px 40px;
+		background:#fff url("../img/search.svg") no-repeat 16px center;
+		color:#808080;
+		font-size:14px;
+		border:1px solid #E3E3E3;
+		@include radius(6px);
+		@include shaddow(0 6px 10px 0 rgba(0,0,0,0.06));
+	}
+	&__{
+	}
+	&__{
+	}
+}

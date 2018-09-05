@@ -1,0 +1,58 @@
+.activation{
+	&.block-grey{
+		padding:34px 32px;
+	}
+	&__block{
+		flex-basis:50%;
+		&:nth-child(2){
+			text-align:right;
+		}
+	}
+	&__title{
+		color:#333;
+		font-size:20px;
+		font-weight:500;
+	}
+	&__text{
+		padding-top:8px;
+		color:#000;
+		font-size:14px;
+	}
+	&__calendar{
+		display:inline-block;
+		width:48px;
+		height:48px;
+		margin-right:4px;
+		padding-top:8px;
+		background-color:#fff;
+		text-align:center;
+		color:#333333;
+		border:1px solid #DEDEDE;
+		@include radius(6px);
+	}
+	&__calendar-active{
+		border:1px solid #FF5252;
+		@include shaddow(0 8px 16px 0 rgba(228,0,0,0.2));
+	}
+	&__calendar-number{
+		font-size:16px;
+	}
+	&__calendar-number_active, &__calendar-days_active{
+		color:#E40000;
+	}
+	&__calendar-days{
+		padding-top:2px;
+		font-size:11px;
+	}
+	.button{
+		float:none;
+		display:inline-block;
+		margin-left:14px;
+		padding:15px 24px;
+		background-color:#E40000;
+		vertical-align:top;
+		color:#fff;
+		text-transform:uppercase;
+		border:0px;
+	}
+}
